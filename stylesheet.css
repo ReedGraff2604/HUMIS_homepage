@@ -19,6 +19,8 @@ div#container {
 
         div.nav {
             text-align: right;
+            padding-right: 15px;
+            font-size: 11px;
 
             a {
                 color: black;
@@ -40,36 +42,45 @@ div#container {
                 margin: 0 5px;
             }
 
+            /*This targets a nav element whose class is nav & also whole class is bottom nav*/
+
             &.bottom-nav {
+
+                font-size: 10px;
+                padding: 5px;
+
                 a {
                     text-transform: lowercase;
+
                 }
             }
         }
 
         div.brown-box {
-            background-color: rosybrown;
+            background-color: #c1c7bb;
             border-radius: 15px;
             margin: 15px 10px 70px;
-            padding: 20px;
+            padding: 20px 20px 20px 90px;
             min-height: 500px;
+            position: relative;
 
-            nav {
+            nav.left-side {
                 float: left;
                 width: 25%;
 
                 a {
-                    border-bottom: 1px solid black;
+                    border-bottom: 2px solid darkolivegreen;
                     display: block;
                     color: black;
-                    font-size: 11px;
+                    font-size: 18px;
+                    font-family: Georgia, serif;
                     text-transform: uppercase;
                     text-decoration: none;
                     /*margin: 0 0 10px 0;*/
-                    padding: 15px 0 15px 20px;
+                    padding: 18px 0 18px 18px;
 
                     &:hover {
-                        background-color: saddlebrown;
+                        background-color: rosybrown;
                     }
                 }
             }
@@ -80,7 +91,11 @@ div#container {
                 background-color: white;
                 padding: 10px;
 
-                h2{
+                > img {
+                    width: 100%;
+                }
+
+                h2 {
                     color: red;
                     border-bottom: 2px dotted red;
                     text-transform: uppercase;
@@ -94,13 +109,42 @@ div#container {
                         font-weight: bold;
                         font-size: 110%;
                     }
+
+                    &.learn-more {
+                        text-align: right;
+
+                        a {
+                            text-decoration: none;
+                            color: red;
+                            text-transform: uppercase;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                    }
+
+
                 }
 
-                a {
-                    text-decoration: none;
-                    color: red;
-                    text-align: right;
-                    text-transform: uppercase;
+            }
+
+            div.clear-float {
+                clear: both;
+            }
+
+            nav.login {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                /*border: 1px solid red;*/
+                margin: 0 0 20px 40px;
+
+                img {
+                    display: block;
+                    margin: 25px 0;
+                    width: 150%;
                 }
             }
         }
